@@ -2,7 +2,8 @@
 :: usually needs admin rights to work. 
 @echo off
 echo Deleting temp files...
-del /q /f /s "%temp%\*"
+:: /q = quiet mode, /f = force deletion of read-only files, /s = delete files in subfolder
+del /q /f /s "%temp%\*"  
 del /q /f /s "C:\Windows\Temp\"
 echo Done.
 pause
