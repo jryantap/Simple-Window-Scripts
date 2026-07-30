@@ -1,6 +1,9 @@
+:: just a simple .bat script, nothing to see here.
+
 @echo off
 setLocal EnableExtensions
 
+::title, and user prompts
 title Active Directory Group Search
 
 cls
@@ -39,5 +42,6 @@ echo.
 echo Results
 echo ---------------------------------------------
 
+:: this is the main program
 net user "%USERNAME%" /domain 2>%1 | findstr /I /C:"%KEYWORD%" > "%TEMP%\ADUserGroupResult.txt"
 
